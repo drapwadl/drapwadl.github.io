@@ -16,10 +16,9 @@
     DRAMAMIX MÉXICO · SINGLE HTML DOWNLOAD PAGE
     Visual reference: 2609071012_dramamix-mx.html.
     Download behavior and endpoints: index (4).html, supplied by the user.
-    pwaUrls: exact existing installation URLs; multiple URLs are selected at random.
+    pwaUrls: installation domains are selected in round-robin order.
     No domain, route, file size, version, rating or certification is invented here.
-    Instalar Lite opens the internal #lite installation view. Its install action
-    continues at the configured installation site, which owns the actual PWA.
+    Instalar Lite redirects directly to a selected PWA installation domain.
     This download page does not install a different GitHub-hosted PWA.
     Default: es-MX. Platform review: ?platform=ios|android|mac.
   -->
@@ -2544,7 +2543,7 @@
                 <button
                   class="download-button primary"
                   type="button"
-                  data-open-lite
+                  data-download="lite"
                 >
                   <span class="button-icon"
                     ><svg><use href="#i-browser" /></svg
@@ -2786,180 +2785,6 @@
       </footer>
     </div>
 
-    <div class="lite-page" id="lite-view" hidden>
-      <header class="header wrap">
-        <a
-          class="wordmark"
-          href="#download"
-          aria-label="DramaMix, volver a la descarga"
-          >DRAMA<span>MIX</span><i></i></a
-        ><a class="lite-back" href="#download"
-          ><svg><use href="#i-arrow" /></svg
-          ><span>Volver a la descarga</span></a
-        >
-      </header>
-      <main class="lite-layout wrap" aria-labelledby="lite-title">
-        <section class="lite-intro">
-          <div class="app-mark lite-app-mark" aria-hidden="true">
-            D<span></span>
-          </div>
-          <div class="eyebrow">
-            <span class="live-dot"></span><span>DRAMAMIX LITE</span>
-          </div>
-          <h1 id="lite-title">TUS DRAMAS.<br /><em>A UN TOQUE.</em></h1>
-          <p class="lite-description">
-            Agrega DramaMix a la pantalla principal y ábrelo desde su icono.
-          </p>
-          <div class="lite-action-panel">
-            <button
-              type="button"
-              class="download-button primary"
-              id="lite-install"
-            >
-              <span class="button-icon"
-                ><svg><use href="#i-phone" /></svg></span
-              ><span class="button-copy"
-                ><strong>Agregar a la pantalla principal</strong
-                ><small>Continúa la instalación en tu navegador</small></span
-              ><svg class="button-arrow"><use href="#i-arrow" /></svg>
-            </button>
-            <p class="lite-status" id="lite-status" role="status">
-              Continúa en el sitio de DramaMix para confirmar la instalación.
-            </p>
-          </div>
-          <p class="lite-browser-note">
-            <svg><use href="#i-browser" /></svg
-            ><span
-              >Usa una ventana normal del navegador, no el modo incógnito.</span
-            >
-          </p>
-        </section>
-
-        <section class="lite-guide" aria-labelledby="lite-guide-title">
-          <span class="section-number">01 / INSTALACIÓN</span>
-          <div class="lite-guide-heading">
-            <h2 id="lite-guide-title">ASÍ DE FÁCIL.</h2>
-            <span>3 PASOS</span>
-          </div>
-          <p class="lite-guide-description">
-            Sigue estos pasos para instalar DramaMix Lite.
-          </p>
-          <ol class="lite-steps">
-            <li>
-              <div class="lite-step-heading">
-                <span class="step-number" aria-hidden="true">01</span>
-                <h3>Abre la instalación</h3>
-              </div>
-              <p>
-                Toca <strong>Agregar a la pantalla principal</strong> para
-                continuar con la instalación en el sitio de DramaMix.
-              </p>
-              <div class="browser-example" aria-hidden="true">
-                <div class="browser-top">
-                  <span class="browser-dots">● ● ●</span
-                  ><span class="browser-address">▣ &nbsp; DramaMix</span
-                  ><span class="browser-menu">⋮</span>
-                </div>
-                <div class="browser-placeholder"><i></i><i></i><i></i></div>
-                <span class="example-caption">MENÚ DEL NAVEGADOR</span>
-              </div>
-            </li>
-            <li>
-              <div class="lite-step-heading">
-                <span class="step-number" aria-hidden="true">02</span>
-                <h3>Confirma en tu navegador</h3>
-              </div>
-              <p>
-                Toca <strong>Instalar</strong> cuando aparezca la opción.
-                También puedes buscar <kbd>Instalar aplicación</kbd> o
-                <kbd>Agregar a la pantalla principal</kbd> en el menú.
-              </p>
-              <div
-                class="browser-example browser-menu-example"
-                aria-hidden="true"
-              >
-                <div class="browser-top">
-                  <span class="browser-dots">● ● ●</span
-                  ><span class="browser-address">▣ &nbsp; DramaMix</span
-                  ><span>⋮</span>
-                </div>
-                <div class="example-menu-row">
-                  <svg><use href="#i-down" /></svg><span>Descargas</span>
-                </div>
-                <div class="example-menu-row active">
-                  <svg><use href="#i-plus" /></svg
-                  ><span>Instalar aplicación</span><span>→</span>
-                </div>
-                <div class="example-menu-row">
-                  <svg><use href="#i-browser" /></svg><span>Configuración</span>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="lite-step-heading">
-                <span class="step-number" aria-hidden="true">03</span>
-                <h3>Abre DramaMix</h3>
-              </div>
-              <p>
-                Confirma la instalación. Después, abre DramaMix desde su icono
-                en tu dispositivo.
-              </p>
-              <div class="browser-example confirm-example" aria-hidden="true">
-                <div class="example-app">
-                  <div class="app-mark">D<span></span></div>
-                  <div>
-                    <strong>DramaMix</strong
-                    ><span>Agregar a la pantalla principal</span>
-                  </div>
-                </div>
-                <div class="example-confirm-buttons">
-                  <span>Cancelar</span
-                  ><span class="example-install">Instalar</span>
-                </div>
-              </div>
-            </li>
-          </ol>
-          <p class="lite-guide-note">
-            Las opciones pueden variar según el navegador y el dispositivo.
-          </p>
-          <div class="lite-faq">
-            <h2>¿ALGUNA DUDA?</h2>
-            <details>
-              <summary>
-                <span>¿Qué hago si no aparece Instalar?</span
-                ><svg><use href="#i-plus" /></svg>
-              </summary>
-              <p>
-                Abre el menú del navegador y busca Instalar aplicación o Agregar
-                a la pantalla principal. Si la opción no aparece, prueba con un
-                navegador compatible con aplicaciones web.
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span>¿Lite es un archivo APK?</span
-                ><svg><use href="#i-plus" /></svg>
-              </summary>
-              <p>
-                No. Lite se instala desde el navegador. Si prefieres el APK para
-                Android, vuelve a la página de descarga.
-              </p>
-            </details>
-          </div>
-        </section>
-      </main>
-      <footer class="footer wrap">
-        <a
-          class="wordmark"
-          href="#download"
-          aria-label="DramaMix, volver a la descarga"
-          >DRAMA<span>MIX</span><i></i></a
-        ><span>DRAMAMIX LITE · A UN TOQUE</span
-        ><a href="#download" class="back-top"
-          ><span>Volver a la descarga</span><span>↗</span></a
-        >
-      </footer>
-    </div>
 
     <dialog
       id="pending-dialog"
@@ -3026,10 +2851,6 @@
                 ? "mac"
                 : "android";
         var method = "lite";
-        var downloadView = document.getElementById("download-view");
-        var liteView = document.getElementById("lite-view");
-        var liteVisible = false;
-        var downloadScroll = 0;
         var apkBusy = false;
         var profileTimer = null;
         var guides = {
@@ -3169,42 +2990,7 @@
               : !hasURL("ios");
           document.getElementById("availability-note").hidden = !missing;
           document.getElementById("preview-tag").hidden = !missing;
-          document.getElementById("lite-status").textContent = hasURL("lite")
-            ? "Continúa en el sitio de DramaMix para confirmar la instalación."
-            : "El enlace de instalación aún no está disponible.";
           renderSteps();
-        }
-        function route() {
-          var show = location.hash === "#lite";
-          if (show && platform !== "android") {
-            var url = new URL(location.href);
-            url.hash = "download";
-            try {
-              history.replaceState(history.state, "", url.href);
-            } catch (e) {
-              location.hash = "download";
-            }
-            show = false;
-          }
-          if (show && !liteVisible) downloadScroll = window.scrollY;
-          downloadView.hidden = show;
-          liteView.hidden = !show;
-          document.title = show
-            ? "DramaMix Lite — Instalación"
-            : "DramaMix — Descarga la app";
-          if (show && !liteVisible)
-            window.scrollTo({ top: 0, behavior: "instant" });
-          if (!show && liteVisible)
-            window.scrollTo({ top: downloadScroll, behavior: "instant" });
-          liteVisible = show;
-        }
-        function openLite() {
-          if (platform !== "android") return;
-          method = "lite";
-          renderSteps();
-          preservePlatform();
-          if (location.hash === "#lite") route();
-          else location.hash = "lite";
         }
         function cacheBustedURL(raw) {
           var url = new URL(raw);
@@ -3299,15 +3085,29 @@
             showPending();
             return;
           }
-          location.assign(urls[Math.floor(Math.random() * urls.length)]);
+          var key = "dramamix-pwa-url-index";
+          var index = 0;
+          try {
+            var storedIndex = Number(localStorage.getItem(key));
+            if (Number.isSafeInteger(storedIndex) && storedIndex >= 0) {
+              index = storedIndex % urls.length;
+            }
+            localStorage.setItem(key, String((index + 1) % urls.length));
+          } catch (e) {
+            index = Math.floor(Math.random() * urls.length);
+          }
+          location.assign(urls[index]);
         }
         function download(kind) {
-          if (platform === "android" && (kind === "apk" || kind === "lite")) {
-            method = kind;
+          if (kind === "lite") {
+            installPWA();
+            return;
+          }
+          if (platform === "android" && kind === "apk") {
+            method = "apk";
             renderSteps();
           }
-          if (kind === "lite") installPWA();
-          else if (kind === "apk") installAndroid();
+          if (kind === "apk") installAndroid();
           else if (kind === "ios") installIOS();
         }
         document.querySelectorAll("[data-method]").forEach(function (button) {
@@ -3323,15 +3123,6 @@
               platform === "android" ? (appleMac ? "mac" : "ios") : "android";
             preservePlatform();
             render();
-            route();
-          });
-        document
-          .querySelector("[data-open-lite]")
-          .addEventListener("click", openLite);
-        document
-          .getElementById("lite-install")
-          .addEventListener("click", function () {
-            download("lite");
           });
         document
           .getElementById("apk-download-dialog")
@@ -3358,8 +3149,6 @@
             }
           });
         render();
-        window.addEventListener("hashchange", route);
-        route();
       })();
     </script>
   </body>
