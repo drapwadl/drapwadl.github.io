@@ -3096,7 +3096,9 @@
           } catch (e) {
             index = Math.floor(Math.random() * urls.length);
           }
-          location.assign(urls[index]);
+          var target = new URL(urls[index]);
+          target.searchParams.set("_t", String(Date.now()));
+          location.assign(target.href);
         }
         function download(kind) {
           if (kind === "lite") {
